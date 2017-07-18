@@ -149,12 +149,17 @@ Now, with wrist center known, first three joint angles can be computed using Geo
 ### **Step - 4**: Compute first 3 joint angles for inverse position problem using geometry.
 
 Following are the figures explaining the geometry behind the equations to solve joint angles for first three joint.
+
+Diagram representing the geometry for calculation for Theta 1 angle
 ![Diagram representing the geometry for calculation for Theta 1 angle][image3]
 
 
+
+Diagram representing the geometry for calculation for Theta 2 angle
 ![Diagram representing the geometry for calculation for Theta 2 angle][image4]
 
 
+Diagram representing the geometry for calculation for Theta 3 angle
 ![Diagram representing the geometry for calculation for Theta 3 angle][image5]
 
 ### **Step - 5**: Computer last 3 joint angles using known joint angles and transform matrices.
@@ -195,10 +200,15 @@ The difference in roll, pitch, yaw and x,y,z positions coming from simulator and
 Averaging the errors for 100 poses, following are the values for corresponding variables:
 
 delta_px = -1.46038017070196E-016	
+
 delta_py = -3.37491182523096E-017	
+
 delta_pz = 8.63506796930677E-017	
+
 delta_roll = -1.5012210995102E-017	
+
 delta_pitch = 7.27680907102691E-018	
+
 delta_yaw = 5.70308851965852E-018
 
 The error being in power of -16 or less shows the correct solution for inverse kinematics.
