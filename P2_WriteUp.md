@@ -21,8 +21,8 @@
 [image1]: ./resources/schematic.jpg
 [image2]: ./resources/DHTable.jpg
 [image3]: ./resources/theta1.jpg
-[image3]: ./resources/theta2.jpg
-[image3]: ./resources/theta3.jpg
+[image4]: ./resources/theta2.jpg
+[image5]: ./resources/theta3.jpg
 
 ### **Step - 1**: Using the kr210.urdf.xacro file, analyze Kuka KR210 and derive DH parameters. 
 
@@ -192,3 +192,13 @@ T0_G = (T0_1* T1_2 * T2_3 * T3_4 * T4_5 * T5_6 * T6_G ).evalf(subs={q1: theta1,q
 Here, the R_correction is the rotation correction from reference frame of joint 6 to world reference frame.
 
 The difference in roll, pitch, yaw and x,y,z positions coming from simulator and Forward kinematics gives us the error.
+Averaging the errors for 100 poses, following are the values for corresponding variables:
+
+delta_px = -1.46038017070196E-016	
+delta_py = -3.37491182523096E-017	
+delta_pz = 8.63506796930677E-017	
+delta_roll = -1.5012210995102E-017	
+delta_pitch = 7.27680907102691E-018	
+delta_yaw = 5.70308851965852E-018
+
+The error being in power of -16 or less shows the correct solution for inverse kinematics.
